@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  width: 100vw; height: 100vh;
+  overflow: hidden;
+  background: var(--page-bg);
+  transition: background-color var(--slow) var(--ease);
+}
+
+.shell {
+  flex: 1 1 0%; min-width: 0;
+  margin-left: var(--sidebar);
+  display: flex; flex-direction: column;
+  height: 100vh; overflow: hidden;
+  transition: margin-left var(--slow) var(--ease-out);
+}
+
+.scroller {
+  flex: 1 1 0%;
+  overflow-y: auto; overflow-x: hidden;
+  background: var(--page-bg);
+  transition: background-color var(--slow) var(--ease);
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 28px 56px;
+  animation: fadeUp .3s var(--ease-out) both;
+}
+
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.55);
+  z-index: 150;
+  backdrop-filter: blur(3px);
+  animation: fadeIn var(--base) var(--ease);
+}
+
+@media (max-width: 768px) {
+  .shell { margin-left: 0; }
+  .inner { padding: 16px 14px 48px; }
+}
+@media (min-width: 769px) and (max-width: 1100px) {
+  .inner { padding: 22px 22px 48px; }
+}

@@ -1,0 +1,34 @@
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--bd1);
+  border-radius: var(--r4);
+  padding: 26px;
+  box-shadow: var(--e1);
+  display: flex; flex-direction: column; justify-content: center;
+  gap: 8px;
+  transition: background-color var(--slow) var(--ease), border-color var(--slow) var(--ease);
+}
+
+.walletLabel {
+  font-size: .78rem; color: var(--tx3); font-weight: 500;
+}
+.balance {
+  font-size: 2rem; font-weight: 800;
+  color: var(--tx1); letter-spacing: -.8px; line-height: 1;
+  margin: 4px 0 12px;
+  transition: color var(--slow) var(--ease);
+}
+
+.row { display: flex; gap: 20px; }
+.stat { display: flex; align-items: center; gap: 8px; }
+
+.statIcon {
+  width: 30px; height: 30px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.incomeIcon { background: var(--green-bg); color: var(--green-dk); }
+.expIcon    { background: var(--red-bg);   color: var(--red-dk);   }
+
+.statVal   { font-size: .88rem; font-weight: 700; color: var(--tx1); line-height: 1.2; }
+.statLabel { font-size: .68rem; color: var(--tx4); margin-top: 1px; }

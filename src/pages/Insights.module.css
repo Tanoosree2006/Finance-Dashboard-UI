@@ -1,0 +1,58 @@
+.page { display: flex; flex-direction: column; gap: 20px; animation: fadeUp .3s var(--ease-out) both; }
+.heading { font-size: 1.5rem; font-weight: 800; color: var(--tx1); letter-spacing: -.4px; }
+
+.kpiGrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+
+.kpi {
+  border-radius: var(--r3); padding: 20px;
+  border: 1px solid transparent;
+  animation: fadeUp .4s var(--ease-out) both;
+  transition: transform var(--base) var(--ease), box-shadow var(--base) var(--ease);
+}
+.kpi:hover { transform: translateY(-2px); box-shadow: var(--e2); }
+.kpi.green { background: var(--green-bg); border-color: rgba(22,163,74,.18); }
+.kpi.red   { background: var(--red-bg);   border-color: rgba(220,38,38,.18); }
+.kpi.amber { background: var(--amber-bg); border-color: rgba(217,119,6,.18); }
+.kpi.blue  { background: var(--blue-bg);  border-color: rgba(59,130,246,.18); }
+
+.kpiLabel { font-size: .68rem; font-weight: 700; color: var(--tx3); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+.kpiValue { font-size: 1.55rem; font-weight: 800; color: var(--tx1); letter-spacing: -.6px; line-height: 1; }
+.kpiSub   { font-size: .72rem; color: var(--tx4); margin-top: 5px; }
+
+.insightBanner {
+  background: var(--brand-bg); border: 1.5px solid var(--brand-bd);
+  border-radius: var(--r3); padding: 16px 20px;
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.insightIcon  { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+.insightTitle { font-size: .82rem; font-weight: 700; color: var(--brand); margin-bottom: 3px; }
+.insightText  { font-size: .8rem; color: var(--tx2); line-height: 1.5; }
+
+.chartCard {
+  background: var(--card-bg); border: 1px solid var(--bd1);
+  border-radius: var(--r3); padding: 24px;
+  box-shadow: var(--e1);
+  transition: background-color var(--slow) var(--ease), border-color var(--slow) var(--ease);
+}
+.chartTitle { font-size: .92rem; font-weight: 700; color: var(--tx1); }
+.chartSub   { font-size: .72rem; color: var(--tx4); margin-top: 2px; margin-bottom: 16px; }
+
+.tip {
+  background: var(--c-tip-bg); border: 1px solid var(--c-tip-bd);
+  border-radius: var(--r2); padding: 10px 14px; box-shadow: var(--e3);
+}
+.tipLabel { font-size: .75rem; font-weight: 700; color: var(--tx1); margin-bottom: 6px; padding-bottom: 6px; border-bottom: 1px solid var(--bd1); }
+.tipRow   { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+.tipDot   { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.tipName  { font-size: .75rem; color: var(--tx3); flex: 1; }
+.tipVal   { font-size: .78rem; font-weight: 700; color: var(--tx1); }
+
+.bars    { display: flex; flex-direction: column; gap: 12px; }
+.barRow  { display: flex; align-items: center; gap: 12px; }
+.barName { font-size: .78rem; color: var(--tx2); font-weight: 500; width: 90px; flex-shrink: 0; }
+.track   { flex: 1; height: 9px; background: var(--muted-bg); border-radius: var(--round); overflow: hidden; }
+.fill    { height: 100%; border-radius: var(--round); transition: width .8s var(--ease-out); min-width: 4px; }
+.barVal  { font-size: .78rem; font-weight: 700; color: var(--tx1); width: 70px; text-align: right; flex-shrink: 0; }
+
+@media (max-width: 1100px) { .kpiGrid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 500px)  { .kpiGrid { grid-template-columns: 1fr; } }

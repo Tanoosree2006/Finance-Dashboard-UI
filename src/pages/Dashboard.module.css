@@ -1,0 +1,30 @@
+.page {
+  display: flex; flex-direction: column; gap: 20px;
+  animation: fadeUp .3s var(--ease-out) both;
+}
+
+.heading {
+  font-size: 1.5rem; font-weight: 800;
+  color: var(--tx1); letter-spacing: -.4px;
+  transition: color var(--slow) var(--ease);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 280px;
+  gap: 16px;
+  align-items: start;
+}
+
+.col1, .col2, .col3 {
+  display: flex; flex-direction: column; gap: 16px;
+}
+
+@media (max-width: 1200px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .col3 { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .col3 { grid-column: unset; }
+}

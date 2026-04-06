@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  color-scheme: light;
+
+  /* ── Surfaces ── */
+  --page-bg:   #eef1f8;
+  --card-bg:   #ffffff;
+  --sidebar-bg:#f7f8fc;
+  --input-bg:  #eef1f8;
+  --hover-bg:  #f0f2f8;
+  --muted-bg:  #f5f6fa;
+
+  /* ── Text ── */
+  --tx1: #0d0f1a;
+  --tx2: #3d4152;
+  --tx3: #6b7280;
+  --tx4: #9ca3af;
+
+  /* ── Borders ── */
+  --bd1: #e8eaf0;
+  --bd2: #d1d5db;
+
+  /* ── Brand ── */
+  --brand:      #6366f1;
+  --brand-dark: #4f46e5;
+  --brand-bg:   #eef2ff;
+  --brand-bd:   rgba(99,102,241,.2);
+
+  /* ── Semantic ── */
+  --green:    #22c55e;
+  --green-dk: #16a34a;
+  --green-bg: #f0fdf4;
+  --red:      #ef4444;
+  --red-dk:   #dc2626;
+  --red-bg:   #fef2f2;
+  --amber:    #f59e0b;
+  --amber-dk: #d97706;
+  --amber-bg: #fffbeb;
+  --blue:     #3b82f6;
+  --blue-bg:  #eff6ff;
+
+  /* ── Card chart colors ── */
+  --c-income:  #22c55e;
+  --c-expense: #ef4444;
+  --c-grid:    #e8eaf0;
+  --c-axis:    #9ca3af;
+  --c-tip-bg:  #ffffff;
+  --c-tip-bd:  #e8eaf0;
+
+  /* ── Elevation ── */
+  --e0: none;
+  --e1: 0 1px 3px rgba(15,20,60,.06), 0 1px 2px rgba(15,20,60,.04);
+  --e2: 0 4px 16px rgba(15,20,60,.08), 0 2px 4px rgba(15,20,60,.04);
+  --e3: 0 8px 28px rgba(15,20,60,.10), 0 3px 8px rgba(15,20,60,.05);
+  --e4: 0 20px 48px rgba(15,20,60,.14);
+
+  /* ── Layout ── */
+  --sidebar: 240px;
+  --topbar:  68px;
+
+  /* ── Radius ── */
+  --r1: 8px;
+  --r2: 12px;
+  --r3: 16px;
+  --r4: 20px;
+  --r5: 24px;
+  --round: 9999px;
+
+  /* ── Space ── */
+  --s1:  4px;  --s2:  8px;  --s3: 12px;  --s4: 16px;
+  --s5: 20px;  --s6: 24px;  --s8: 32px;  --s10: 40px;
+
+  /* ── Motion ── */
+  --ease:     cubic-bezier(.4,0,.2,1);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --fast: 120ms;
+  --base: 200ms;
+  --slow: 300ms;
+
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ── Dark Mode ── */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --page-bg:   #0d1117;
+  --card-bg:   #161b22;
+  --sidebar-bg:#161b22;
+  --input-bg:  #21262d;
+  --hover-bg:  #21262d;
+  --muted-bg:  #1c2333;
+  --tx1: #f0f6fc;
+  --tx2: #c9d1d9;
+  --tx3: #8b949e;
+  --tx4: #6e7681;
+  --bd1: #30363d;
+  --bd2: #3d444d;
+  --brand:      #818cf8;
+  --brand-dark: #6366f1;
+  --brand-bg:   rgba(99,102,241,.14);
+  --brand-bd:   rgba(99,102,241,.3);
+  --green:    #4ade80;
+  --green-dk: #3fb950;
+  --green-bg: rgba(34,197,94,.1);
+  --red:      #ff7b72;
+  --red-dk:   #f85149;
+  --red-bg:   rgba(239,68,68,.1);
+  --amber:    #f0c347;
+  --amber-dk: #e3b341;
+  --amber-bg: rgba(245,158,11,.1);
+  --blue:     #60a5fa;
+  --blue-bg:  rgba(59,130,246,.1);
+  --c-grid:   #21262d;
+  --c-axis:   #6e7681;
+  --c-tip-bg: #1c2333;
+  --c-tip-bd: #30363d;
+  --c-income:  #3fb950;
+  --c-expense: #f85149;
+  --e1: 0 1px 3px rgba(0,0,0,.4);
+  --e2: 0 4px 16px rgba(0,0,0,.45);
+  --e3: 0 8px 28px rgba(0,0,0,.55);
+  --e4: 0 20px 48px rgba(0,0,0,.65);
+}
+
+html, body, #root { height: 100%; width: 100%; }
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font);
+  background: var(--page-bg);
+  color: var(--tx1);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  transition: background-color var(--slow) var(--ease),
+              color var(--slow) var(--ease);
+}
+
+#root { display: flex; overflow: hidden; }
+
+button { cursor: pointer; font-family: var(--font); border: none; background: none; }
+input, select, textarea { font-family: var(--font); }
+a { text-decoration: none; color: inherit; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--bd2) transparent; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bd2); border-radius: var(--round); }
+
+/* Animations */
+@keyframes fadeUp   { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn   { from{opacity:0} to{opacity:1} }
+@keyframes popIn    { 0%{opacity:0;transform:scale(.93) translateY(-8px)} 65%{transform:scale(1.02)} 100%{opacity:1;transform:scale(1) translateY(0)} }
+@keyframes spin     { to{transform:rotate(360deg)} }
+@keyframes shimmer  { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+@keyframes slideIn  { from{opacity:0;transform:translateX(-12px)} to{opacity:1;transform:translateX(0)} }

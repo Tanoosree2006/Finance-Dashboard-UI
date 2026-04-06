@@ -1,0 +1,46 @@
+.wrap {
+  background: var(--card-bg);
+  border: 1px solid var(--bd1);
+  border-radius: var(--r4);
+  padding: 22px;
+  box-shadow: var(--e1);
+  display: flex; flex-direction: column; gap: 6px;
+  transition: background-color var(--slow) var(--ease), border-color var(--slow) var(--ease);
+}
+
+.card { padding: 6px 0; }
+.cardTitle { font-size: .9rem; font-weight: 700; color: var(--tx1); }
+.cardSub   { font-size: .72rem; color: var(--tx3); margin-top: 3px; line-height: 1.4; }
+.countRow  { font-size: .8rem; color: var(--tx2); margin-top: 10px; font-weight: 500; }
+.countRow strong { color: var(--tx1); font-weight: 700; }
+
+.progressTrack {
+  height: 7px; background: var(--muted-bg);
+  border-radius: var(--round); overflow: hidden; margin-top: 8px;
+  border: 1px solid var(--bd1);
+}
+.progressFill {
+  height: 100%; background: var(--tx1);
+  border-radius: var(--round);
+  transition: width .6s var(--ease-out);
+}
+
+.sectionTitle { font-size: .85rem; font-weight: 700; color: var(--tx1); margin-bottom: 10px; }
+
+.divider { height: 1px; background: var(--bd1); margin: 6px 0; }
+
+.list { display: flex; flex-direction: column; gap: 8px; }
+
+.row { display: flex; align-items: center; gap: 10px; padding: 6px 8px; border-radius: var(--r1); transition: background var(--fast) var(--ease); }
+.row:hover { background: var(--hover-bg); }
+
+.rowIcon {
+  width: 34px; height: 34px; border-radius: var(--r1);
+  background: var(--muted-bg); border: 1px solid var(--bd1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .9rem; flex-shrink: 0;
+}
+.payIcon { background: var(--muted-bg); }
+
+.rowAmt   { font-size: .85rem; font-weight: 700; color: var(--tx1); }
+.rowLabel { font-size: .7rem; color: var(--tx4); margin-top: 1px; }

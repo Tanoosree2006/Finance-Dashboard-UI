@@ -1,0 +1,21 @@
+.page    { display: flex; flex-direction: column; gap: 16px; animation: fadeUp .3s var(--ease-out) both; }
+.bar     { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.heading { font-size: 1.5rem; font-weight: 800; color: var(--tx1); letter-spacing: -.4px; }
+.sub     { font-size: .75rem; color: var(--tx4); margin-top: 2px; }
+.actions { display: flex; gap: 8px; }
+
+.addBtn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 18px; border: none; border-radius: var(--r2);
+  background: var(--brand); color: #fff;
+  font-size: .875rem; font-weight: 600;
+  transition: var(--base) var(--ease);
+  box-shadow: 0 2px 8px rgba(99,102,241,.3);
+}
+.addBtn:hover { background: var(--brand-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(99,102,241,.4); }
+
+.viewerBanner {
+  background: var(--amber-bg); border: 1.5px solid rgba(245,158,11,.25);
+  border-radius: var(--r2); padding: 10px 16px;
+  font-size: .85rem; color: var(--tx1);
+}

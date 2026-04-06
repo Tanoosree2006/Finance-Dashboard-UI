@@ -1,0 +1,21 @@
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--bd1);
+  border-radius: var(--r4);
+  padding: 24px;
+  box-shadow: var(--e1);
+  transition: background-color var(--slow) var(--ease), border-color var(--slow) var(--ease);
+}
+.title { font-size: .92rem; font-weight: 700; color: var(--tx1); margin-bottom: 4px; }
+
+.ringWrap { position: relative; }
+.center {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  text-align: center; pointer-events: none;
+}
+.centerVal   { font-size: 1rem; font-weight: 800; color: var(--tx1); letter-spacing: -.4px; }
+.centerLabel { font-size: .65rem; color: var(--tx4); margin-top: 2px; }
+
+.legend { display: flex; gap: 16px; justify-content: center; margin-top: 4px; }
+.legItem { display: flex; align-items: center; gap: 6px; font-size: .72rem; color: var(--tx3); font-weight: 500; }
+.legDot  { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }

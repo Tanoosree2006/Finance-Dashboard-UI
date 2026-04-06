@@ -1,0 +1,78 @@
+.backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.6);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000; padding: 16px;
+  backdrop-filter: blur(4px);
+  animation: fadeIn var(--base) var(--ease);
+}
+.modal {
+  background: var(--card-bg);
+  border: 1px solid var(--bd1);
+  border-radius: var(--r4);
+  width: 100%; max-width: 440px;
+  box-shadow: var(--e4);
+  animation: popIn .25s var(--ease-out);
+  transition: background-color var(--slow) var(--ease);
+}
+.head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px 14px;
+  border-bottom: 1px solid var(--bd1);
+}
+.title { font-size: 1rem; font-weight: 700; color: var(--tx1); }
+.closeBtn {
+  width: 30px; height: 30px; border-radius: var(--r1);
+  background: var(--muted-bg); color: var(--tx3);
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--fast) var(--ease), color var(--fast) var(--ease);
+}
+.closeBtn:hover { background: var(--red-bg); color: var(--red-dk); }
+
+.body { padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; }
+
+.toggle {
+  display: flex; gap: 4px;
+  background: var(--muted-bg); padding: 4px; border-radius: var(--r2);
+  border: 1px solid var(--bd1);
+}
+.tBtn { flex: 1; padding: 8px; border-radius: 7px; background: none; color: var(--tx3); font-size: .82rem; font-weight: 500; transition: var(--base) var(--ease); }
+.tExp { background: var(--red-bg);   color: var(--red-dk);   font-weight: 700; }
+.tInc { background: var(--green-bg); color: var(--green-dk); font-weight: 700; }
+
+.row2  { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.lbl   { font-size: .75rem; font-weight: 600; color: var(--tx3); }
+.inp {
+  padding: 9px 12px;
+  border: 1.5px solid var(--bd1); border-radius: var(--r2);
+  background: var(--input-bg); color: var(--tx1);
+  font-size: .875rem; width: 100%;
+  transition: border-color var(--fast) var(--ease), background var(--slow) var(--ease);
+}
+.inp::placeholder { color: var(--tx4); }
+.inp:focus { border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-bd); outline: none; }
+.err { border-color: var(--red-dk) !important; }
+.errMsg { font-size: .7rem; color: var(--red-dk); }
+
+.foot {
+  display: flex; justify-content: flex-end; gap: 8px;
+  padding: 14px 24px 20px;
+  border-top: 1px solid var(--bd1);
+}
+.cancelBtn {
+  padding: 9px 18px; border: 1.5px solid var(--bd1);
+  border-radius: var(--r2); background: var(--card-bg);
+  color: var(--tx2); font-size: .875rem; font-weight: 500;
+  transition: var(--base) var(--ease);
+}
+.cancelBtn:hover { background: var(--hover-bg); }
+.submitBtn {
+  padding: 9px 22px; border: none; border-radius: var(--r2);
+  font-size: .875rem; font-weight: 600; color: #fff;
+  transition: var(--base) var(--ease);
+}
+.submitExp { background: var(--red-dk); }
+.submitExp:hover { filter: brightness(1.1); box-shadow: 0 4px 14px rgba(220,38,38,.35); }
+.submitInc { background: var(--green-dk); }
+.submitInc:hover { filter: brightness(1.1); box-shadow: 0 4px 14px rgba(22,163,74,.35); }

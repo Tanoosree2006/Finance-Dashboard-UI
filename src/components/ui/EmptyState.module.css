@@ -1,0 +1,12 @@
+/* EmptyState.module.css */
+.wrap {
+  display: flex; flex-direction: column; align-items: center;
+  gap: var(--sp3); padding: var(--sp10) var(--sp6);
+  color: var(--t4);
+}
+.icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--s2);
+  display: flex; align-items: center; justify-content: center;
+}
+.msg { font-size: .875rem; font-weight: 500; }
